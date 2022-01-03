@@ -9,14 +9,12 @@ import (
 func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
-	// Get a greeting message and print it.
-	message, err := greetings.Hello("Marcel")
 
-	// If an error was returned, print it to the console and
-	// exit the program.
+	names := []string{"Gladys", "Samantha", "Darrin"}
+	messages, err := greetings.Hellos(names)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Println(message)
+	fmt.Println(messages)
 }
